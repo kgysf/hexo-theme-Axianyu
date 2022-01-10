@@ -55,6 +55,7 @@ strong
   margin 0 auto
   width 60%
   color #555
+  word-wrap break-word
   img
     display block
     max-width 100%
@@ -109,20 +110,33 @@ strong
   -webkit-animation-delay 0.4s
   -moz-animation-delay 0.4s
   animation-delay 0.4s
-  div
-    margin-top 1%
-    margin-bottom 1%
+  margin-top 20px
+  margin-bottom 40px
+  padding 10px 20px
+  border-radius 5px
+  box-shadow 0 0 10px 0px rgba(200,200,200,0.6)
+
   &__link
     color #555
-    &__time
-      letter-spacing 0.04em
-      // display inline-block
-      margin-top 18px
-      font-weight 500
-    &__title
-      // display inline-block
-      padding-left 8px
-      text-indent 12px
+    text-decoration none
+  &__time
+    letter-spacing 0.04em
+    // display inline-block
+    margin-top 18px
+    font-weight 500
+  &__title
+    // display inline-block
+    padding-bottom  12px
+    // text-indent 12px
+    font-size 18px
+    font-weight 500
+    border-bottom 1px solid #eee
+  &__desc
+    margin-bottom 10px
+  &__footer
+    // padding-left 8px
+    font-size 12px
+
 
 .feed-link
   display inline-block
