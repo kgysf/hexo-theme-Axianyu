@@ -1,0 +1,14 @@
+each post in page.posts.sort('date', -1).data
+    if post.source !== '_posts/about.md' || config.axianyu.hide_about_in_index !== true
+        div.archive-item
+            a.archive-item__link(href=url_for(post.path))
+                div.archive-item__title
+                    span= post.title || 'No Title'
+                div.archive-item__desc
+                    span!= post.excerpt || post.content
+                div.archive-item__footer
+                    span.archive-item__tags
+                        each tag in post.tags.data
+                            span= `#${tag.name}`
+                    span.archive-item__date= date(post.date)
+                
